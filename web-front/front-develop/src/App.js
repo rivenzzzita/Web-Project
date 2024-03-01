@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './Components/crudComponent';
+import { UserList, GetUserById, CreateUser, UpdateUser, DeleteUser, Home } from './Components/crudComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path="/users" element={<UserList />}/>
+            <Route path="/users/get" element={<GetUserById />} />
+            <Route path="/users/create" element={<CreateUser />} />
+            <Route path="/users/update" element={<UpdateUser />} />
+            <Route path="/users/delete" element={<DeleteUser />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
-export default App;
+export default App

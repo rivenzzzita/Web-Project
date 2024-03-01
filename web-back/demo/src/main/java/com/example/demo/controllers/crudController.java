@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:3000")
 public class crudController {
 
 	
@@ -26,8 +27,8 @@ public class crudController {
     @GetMapping("/saludo")
     public String getHelloWorld(){
     	return("Hello World");	
-    }
-    
+		    }
+		    
 
     @GetMapping("/{id}")
     public ResponseEntity<Optional<daoUser>> getUserById(@PathVariable Long id) {

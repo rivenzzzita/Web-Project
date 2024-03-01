@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.nav{
+    background-color: purple;
+}
+.nav__li{
+    display: inline-block;
+    padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav__li:hover >i{
+    color: gray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav__li:hover > a{
+    color: gray;
+}
+
+.nav__li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav__li i{
+    color: white;
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 7px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  th {
+    background-color: #f2f2f2;
   }
+
+  .user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .user-form label {
+    margin-bottom: 5px;
+  }
+  
+  .user-form input {
+    margin-bottom: 10px;
+  }
+  
+
+/*.div__input{
+    background: rgb(165, 164, 164);
 }
+
+.div__UserList{
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+}
+
+.div__UserList-h2{
+    background-color: aqua;
+}
+
+.div__UserList-button{
+    background-color: aqua;
+}
+
+* p{
+background-color: aqua;
+}*/
